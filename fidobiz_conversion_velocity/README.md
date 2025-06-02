@@ -1,69 +1,67 @@
-Conversion KPI Analysis: ABC_Conversion_Analysis_2025_05_27.csv
+# 📈 Conversion KPI Analysis
 
+This project analyzes key conversion performance indicators across different cohorts using the dataset:  
+**`ABC_Conversion_Analysis_2025_05_27.csv`**
 
-This script performs statistical analysis and visualization of conversion KPIs across different cohorts, based on the dataset ABC_Conversion_Analysis_2025_05_27.csv.
+---
 
-📊 Overview
-The analysis covers the following key performance indicators (KPIs):
-
-FIDO_SCORE_TO_KYB_SUBMISSION_DURATION
-
-KYB_TO_DOC_DURATION
-
-DOC_TO_BIZ_APPROVED_DURATION
+## 🗂️ Overview
 
 For each KPI, the script:
+✅ Computes summary statistics (mean, median, count) per cohort  
+✅ Runs statistical tests:
+- **ANOVA** (for differences in means)
+- **Kruskal-Wallis** (for differences in medians)  
+✅ Plots visualizations:
+- Histograms for KPI distributions per cohort  
+- Bar plots comparing means and medians across cohorts  
 
-Computes summary statistics (mean, median, count) for each cohort.
+---
 
-Performs:
+## 🔍 KPIs Analyzed
+- **FIDO_SCORE_TO_KYB_SUBMISSION_DURATION**  
+- **KYB_TO_DOC_DURATION**  
+- **DOC_TO_BIZ_APPROVED_DURATION**
 
-ANOVA (Analysis of Variance) to test for differences in means.
+---
 
-Kruskal-Wallis test for differences in medians.
+## 🧪 Statistical Tests
+- **ANOVA** – Tests for differences in mean KPI durations across cohorts  
+- **Kruskal-Wallis** – Non-parametric test for differences in medians across cohorts  
 
-Plots:
+Both tests help identify statistically significant differences in performance.
 
-Histograms of KPI distributions per cohort.
+---
 
-Bar plots comparing means and medians across cohorts.
+## 📊 Visualizations
+- **Histograms** – Show KPI distribution for each cohort  
+- **Bar Plots** – Compare mean and median durations:
+  - Across cohorts  
+  - Within each cohort for all KPIs  
 
-🧪 Statistical Tests
-ANOVA
-Compares the mean of each KPI across cohorts to check for significant differences.
+---
 
-Kruskal-Wallis
-A non-parametric alternative to ANOVA, testing for differences in medians.
-
-Both tests help identify statistically significant differences in cohort performance.
-
-📈 Visualizations
-Histograms
-Distribution of each KPI per cohort.
-
-Bar plots
-Comparison of mean and median KPI durations:
-
-Mean and median comparisons across cohorts.
-
-Mean and median comparisons within each cohort for all KPIs.
-
-These plots offer both high-level and detailed views of performance patterns.
-
-🏃‍♂️ How to Run
-1. Install requirements (if you haven’t already):
-
+## 🚀 How to Run
+1️⃣ Install dependencies:
+```bash
 pip install pandas scipy matplotlib seaborn
 
-2. Run the script:
+---
 
+2️⃣ Run the script:
+
+``` bash
 python ABCSpeedanalysis.py
 
-3. View output:
+---
+3️⃣ View the results:
 
-The script prints summary statistics and p-values for each KPI.
+Summary statistics and p-values printed in the terminal
 
-Interactive plots will pop up one by one for you to review.
+Interactive plots appear one by one for review
+
+
+
 
 📂 Input Data
 The script expects a CSV file named ABC_Conversion_Analysis_2025_05_27.csv containing at least:
